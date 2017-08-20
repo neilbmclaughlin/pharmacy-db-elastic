@@ -1,0 +1,11 @@
+sudo: required
+services: docker
+
+install: sudo sysctl -w vm.max_map_count=262144
+
+before_script: docker build .
+
+script: bash ./scripts/test
+
+after_success:
+  - bash ./scripts/deploy.sh

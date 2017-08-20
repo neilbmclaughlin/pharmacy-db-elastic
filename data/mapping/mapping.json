@@ -1,0 +1,29 @@
+{
+  "settings":{
+  },
+  "mappings": {
+    "pharmacy": {
+      "properties": {
+        "openingTimes": {
+          "enabled": false
+        },
+        "openingTimes2": {
+          "type" : "nested",
+          "properties": {
+            "opens" : { "type" : "integer" },
+            "closes": { "type" : "integer" }
+          }
+        },
+        "name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      }
+    }
+  }
+}

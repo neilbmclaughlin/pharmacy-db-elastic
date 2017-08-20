@@ -1,0 +1,7 @@
+#!/bin/bash
+echo 'Starting to format merge GP data ready for ES ingestion'
+pushd /usr/share/elasticsearch/tmp/data
+mkdir -p output
+jq -c -f scripts/transform-data-filter.jq input/pharmacy-data.json > output/gp-data-bulk-insert.json
+popd
+echo 'Finished formatting GP data ready for ES ingestion'

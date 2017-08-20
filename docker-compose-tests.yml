@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+
+  container-tests:
+    build: .
+    command: bash /scripts/container-tests
+    user: root
+    volumes:
+      - ./scripts/container-tests:/scripts/container-tests
+    links:
+      - pharmacies-db-elastic:es
+
+  pharmacies-db-elastic:
+    build: .
