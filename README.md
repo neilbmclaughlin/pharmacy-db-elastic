@@ -104,7 +104,7 @@ for more detail on querying.
 
 # Data import
 
-A data load script is used to shape the data on load using Painless (the ES scripting language based on Groovey). The script is pharmacy-procesor.json found in data/scripts.
+A data load script is used to shape the data on load using Painless (the [ES scripting language](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-scripting.html) based on Groovey). The script is [`pharmacy-processor.json`](data/scripts/pharmacy-processor.json).
 
 ## Optional
 
