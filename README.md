@@ -102,6 +102,10 @@ See
 [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html)
 for more detail on querying.
 
+# Data import
+
+A data load script is used to shape the data on load using Painless (the ES scripting language based on Groovey). The script is pharmacy-procesor.json found in data/scripts.
+
 ## Optional
 
 An alternative to using `curl` for ES config, querying and also for visualisation is [kibana](https://www.elastic.co/products/kibana).
